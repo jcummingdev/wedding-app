@@ -1,0 +1,55 @@
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Invitations {
+  id String @id @default(cuid())
+
+  //PERSONAL INFO
+  fName String ?
+  lName String ?
+  email String ?
+
+  //WEDDING INFO
+  attending Boolean ?
+  receptionOnly Boolean? @default(false)
+  dietaryRestrictions String? @db.Text
+
+  //ADDRESS
+  streetAddress String ?
+  appartment String ?
+  city String ?
+  province String ?
+  PostalCode String ?
+
+  // INVITATION
+  qrCode String ?
+  pdfInvitation String ?
+
+  //GUESTS
+  guests Guests[]
+
+}
+
+model Guests {
+  id String @id @default(cuid())
+
+  //INVITATION
+  invitationId String
+  invitation Invitations @relation(fields: [invitationId], references: [id], onDelete: Cascade)
+
+  //PERSONAL INFORMATION
+  fName String ?
+  lName String ?
+
+  //WEDDING INFO
+  dietaryResitrcitions String ? @db.Text
+
+  @@index([invitationId])
+}

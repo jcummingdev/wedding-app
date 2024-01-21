@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Sacramento', cursive;
+    color: black;
+}
+
+h3,
+h4,
+h5 {
+    font-family: 'Inter', sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1400px;
+    width: 95%;
+    margin: 0px auto;
+}
+
+main {
+    margin-top: 100px;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid black;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    transition: .3s ease;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+
+header ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navLink a {
+    color: black;
+    transition: .3s ease;
+    position: relative;
+    padding: 5px 15px;
+}
+
+.navLink a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: .3s ease;
+}
+
+.navLink a:hover{
+    color: purple;
+}
+
+.navLink a:hover::after{
+    background: black;
+}
