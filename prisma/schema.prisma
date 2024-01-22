@@ -31,10 +31,12 @@ model Invitations {
   // INVITATION
   qrCode String ?
   pdfInvitation String ?
+  textCode String ? @unique
 
   //GUESTS
   guests Guests[]
 
+  @@index([textCode])
 }
 
 model Guests {
@@ -49,7 +51,7 @@ model Guests {
   lName String ?
 
   //WEDDING INFO
-  dietaryResitrcitions String ? @db.Text
+  dietaryRestrictions String ? @db.Text
 
   @@index([invitationId])
 }

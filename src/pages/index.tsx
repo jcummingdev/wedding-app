@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Img from "next/image";
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/layout";
 
@@ -13,11 +13,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <div>
-          <h3>Page Body</h3>
+      <div className="container">
+        <div className="heroImage" style={{position: 'relative', width: '100%'}}>
+          <Img 
+            src={'https://placekitten.com/200/300'}
+            fill={true}
+            style={{objectFit: 'cover'}}
+            alt="Cumming Charbonneau Wedding"
+          />
         </div>
-      </Layout>
+        <div className="introText sectionBlock">
+          <p><em>Please join us for our wedding celebration on </em>
+            <span className="date">August 24, 2024</span>
+          </p>
+        </div>
+      </div>
+      <div className="ourStory sectionBlock">
+        <div className="container">
+          <h2>Our Story</h2>
+          <p>Pure Chaos</p>
+        </div>
+      </div>
+
     </>
   );
 }
