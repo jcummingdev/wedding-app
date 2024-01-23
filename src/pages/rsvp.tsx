@@ -180,8 +180,10 @@ export default function Rsvp(){
             <div key={`guest${index}`} className="guest">
                 <h3>Guest {index + 2}</h3>
                 <label>
-                    <input type="text" name="fName" id={`${index}`} placeholder="First Name" onChange={(e) => guestInputHandler(e)} defaultValue={guest.fName? guest.fName : ''}/>
-                    <input type="text" name="lName" id={`${index}`} placeholder="Last Name" onChange={(e) => guestInputHandler(e)} defaultValue={guest.lName? guest.lName : ''}/>
+                    <div className="row">
+                        <input type="text" name="fName" id={`${index}`} placeholder="First Name" onChange={(e) => guestInputHandler(e)} defaultValue={guest.fName? guest.fName : ''}/>
+                        <input type="text" name="lName" id={`${index}`} placeholder="Last Name" onChange={(e) => guestInputHandler(e)} defaultValue={guest.lName? guest.lName : ''}/>
+                    </div>
                     <textarea name="dietaryRestrictions" id={`${index}`} placeholder="Dietary Restrictions/Special Requests" onChange={(e) => guestInputHandler(e)} defaultValue={guest.dietaryRestrictions? guest.dietaryRestrictions : ''}/>
                 </label>
 
@@ -201,16 +203,23 @@ export default function Rsvp(){
                     
                     <div className="confirmForm">
                         <h2>Hi {inviteInfo?.fName}, we can't wait to see you!</h2>
-                        <label>Please Confirm your details
-                            <input type="text" name="fName" placeholder='First Name' defaultValue={inviteInfo.fName? inviteInfo.fName : ''} onChange={(e) => inputHanlder(e)}/>
-                            <input type="text" name="lName" placeholder='Last Name' defaultValue={inviteInfo.lName? inviteInfo.lName : ''} onChange={(e) => inputHanlder(e)}/>
-                        </label>
-                        <label>Email Address: 
-                            <input type="text" name='email' placeholder="email" defaultValue={inviteInfo.email? inviteInfo.email : ''} onChange={(e) => inputHanlder(e)}/>
-                        </label>
-                        <label>Do you have any dietary restrictions?
-                            <textarea name="dietaryRestrictions" placeholder="Dietary Restrictions/Special Requests" defaultValue={inviteInfo.dietaryRestrictions? inviteInfo.dietaryRestrictions : ''} onChange={(e) => inputHanlder(e)}/>
-                        </label>
+
+                        <div className="primaryGuest">
+                            <label id="name">Please Confirm your details
+                                <div className="row">
+                                    <input type="text" name="fName" placeholder='First Name' defaultValue={inviteInfo.fName? inviteInfo.fName : ''} onChange={(e) => inputHanlder(e)}/>
+                                    <input type="text" name="lName" placeholder='Last Name' defaultValue={inviteInfo.lName? inviteInfo.lName : ''} onChange={(e) => inputHanlder(e)}/>
+                                </div>
+
+                            </label>
+                            <label id="email">Email Address: 
+                                <input type="text" name='email' placeholder="email" defaultValue={inviteInfo.email? inviteInfo.email : ''} onChange={(e) => inputHanlder(e)}/>
+                            </label>
+                            <label id="restrictions">Do you have any dietary restrictions?
+                                <textarea name="dietaryRestrictions" placeholder="Dietary Restrictions/Special Requests" defaultValue={inviteInfo.dietaryRestrictions? inviteInfo.dietaryRestrictions : ''} onChange={(e) => inputHanlder(e)}/>
+                            </label>
+                        </div>
+
                         <div className="guestsSection">
                             {guests}
                         </div>

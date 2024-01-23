@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Nav from "./nav";
+import Footer from "./footer";
 
 interface ChildrenProps {
     children?: ReactNode
@@ -12,6 +13,7 @@ export default function Layout({children}: ChildrenProps) {
             <main>
                 { children }
             </main>
+            <Footer />
         </>
     )
 }
