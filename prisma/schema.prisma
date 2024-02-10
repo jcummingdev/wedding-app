@@ -55,3 +55,12 @@ model Guests {
 
   @@index([invitationId])
 }
+
+model Songs {
+  id String @id @default(cuid())
+
+  artist String ?
+  title String ?
+
+  requestedBy String ?
+}

@@ -88,7 +88,7 @@ function InfoReq(props:ComponentProps) {
         return (
             <div className="codeEntry">
                 <h2>Please enter the code on your invitation</h2>
-                <input type="text" onChange={(e) => inputHandler(e)}/>
+                <input type="text" placeholder="Enter Code Here" onChange={(e) => inputHandler(e)}/>
                 <button onClick={submitCode}>Submit</button>
             </div>
         )
@@ -164,7 +164,6 @@ export default function Rsvp(){
                 attending: attending,
             });
     
-            console.log(data);
             setFormMessage(data.message);
         } catch (error) {
             console.error('Error:', error);
@@ -184,7 +183,7 @@ export default function Rsvp(){
                         <input type="text" name="fName" id={`${index}`} placeholder="First Name" onChange={(e) => guestInputHandler(e)} defaultValue={guest.fName? guest.fName : ''}/>
                         <input type="text" name="lName" id={`${index}`} placeholder="Last Name" onChange={(e) => guestInputHandler(e)} defaultValue={guest.lName? guest.lName : ''}/>
                     </div>
-                    <textarea name="dietaryRestrictions" id={`${index}`} placeholder="Dietary Restrictions/Special Requests" onChange={(e) => guestInputHandler(e)} defaultValue={guest.dietaryRestrictions? guest.dietaryRestrictions : ''}/>
+                    <textarea name="dietaryRestrictions" id={`${index}`} placeholder="Dietary Restrictions/Allergies" onChange={(e) => guestInputHandler(e)} defaultValue={guest.dietaryRestrictions? guest.dietaryRestrictions : ''}/>
                 </label>
 
             </div>
@@ -216,7 +215,7 @@ export default function Rsvp(){
                                 <input type="text" name='email' placeholder="email" defaultValue={inviteInfo.email? inviteInfo.email : ''} onChange={(e) => inputHanlder(e)}/>
                             </label>
                             <label id="restrictions">Do you have any dietary restrictions?
-                                <textarea name="dietaryRestrictions" placeholder="Dietary Restrictions/Special Requests" defaultValue={inviteInfo.dietaryRestrictions? inviteInfo.dietaryRestrictions : ''} onChange={(e) => inputHanlder(e)}/>
+                                <textarea name="dietaryRestrictions" placeholder="Dietary Restrictions/Allergies" defaultValue={inviteInfo.dietaryRestrictions? inviteInfo.dietaryRestrictions : ''} onChange={(e) => inputHanlder(e)}/>
                             </label>
                         </div>
 

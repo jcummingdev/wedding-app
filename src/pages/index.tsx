@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Img from "next/image";
-import styles from "@/styles/Home.module.css";
-import Layout from "@/components/layout";
 
 
 export default function Home() {
@@ -25,6 +23,7 @@ export default function Home() {
         <div className="introText sectionBlock">
           <p><em>Please join us for our wedding celebration on </em>
             <span className="date">August 24, 2024</span>
+            <span>At the <strong>Leo Mol Sculpture Garden in Assiniboine Park</strong></span>
           </p>
         </div>
       </div>
