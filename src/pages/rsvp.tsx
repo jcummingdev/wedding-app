@@ -201,7 +201,7 @@ export default function Rsvp(){
                 {validCode? 
                     
                     <div className="confirmForm">
-                        <h2>Hi {inviteInfo?.fName}, we can't wait to see you!</h2>
+                        <h2>Hi {inviteInfo?.fName}, we can&apos;t wait to see you!</h2>
 
                         <div className="primaryGuest">
                             <label id="name">Please Confirm your details

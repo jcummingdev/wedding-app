@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="copyright">
                 <div className='container'>
                     <span>Website built by Jason Cumming</span>
-                    <span>It's rude to steal people's work.</span>
+                    <span>It&apos;s rude to steal people&apos;s work.</span>
                 </div>
             </div>
         </footer>

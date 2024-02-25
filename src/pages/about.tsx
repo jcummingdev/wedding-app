@@ -31,7 +31,7 @@ export default function About(){
 
                 <p><Img src="/grad.jpg" width={225} height={150} style={{float: 'left', padding: '10px 10px 10px 0px'}} alt="Grade 12 Graduation"/>It&rsquo;s been a long 15 years full of ups and downs. The best part about growing up with the person who would become your wife is that by the time we say &ldquo;I do&rdquo;, we&rsquo;ll have already shared a whole lifetime with each other.</p>
 
-                <p>2 years ago we flew to Paris, got engaged, and then packed our SUV and drove across the country to settle in B.C., just like we always planned. Every day I can&rsquo;t believe this is how my life actually turned out and I can't wait to enjoy every single day of the next 78 years together. </p>
+                <p>2 years ago we flew to Paris, got engaged, and then packed our SUV and drove across the country to settle in B.C., just like we always planned. Every day I can&rsquo;t believe this is how my life actually turned out and I can&apos;t wait to enjoy every single day of the next 78 years together. </p>
 
                 <div className="photoContainer" style={{width: '100%', height: '600px', position: 'relative'}}>
                     <Img src={'/1N7A7311.jpg'} fill={true} alt="Proposal" style={{objectFit: 'cover'}}/>
