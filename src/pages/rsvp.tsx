@@ -223,6 +223,7 @@ export default function Rsvp(){
                             {guests}
                         </div>
                         <div className="formAcceptance">
+                            <p>Please note, due to limited seating availability, only guests listed above will be accounted for at the event. Additionally, both the ceremony and reception will not be child-friendly. </p>
                             <div className="formMessage">
                                 <p>{formMessage}</p>
                             </div>

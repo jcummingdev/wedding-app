@@ -14,9 +14,9 @@ export default function Home() {
       <div className="container">
         <div className="heroImage" style={{position: 'relative', width: '100%'}}>
           <Img 
-            src={'https://placekitten.com/200/300'}
+            src={'/1N7A7311.jpg'}
             fill={true}
-            style={{objectFit: 'cover'}}
+            style={{objectFit: 'cover', objectPosition: 'bottom'}}
             alt="Cumming Charbonneau Wedding"
           />
         </div>

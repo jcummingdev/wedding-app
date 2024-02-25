@@ -51,7 +51,7 @@ export default function Event(){
 
             <div className="container" id="intro">
                 <h1>Event Information</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut quam sodales, vehicula velit nec, tempus metus. Curabitur eu tortor sit amet orci sollicitudin eleifend vel sed sem. Curabitur scelerisque magna urna, ac ultrices erat iaculis ut. Ut sodales magna ac nisl accumsan vehicula sit amet vitae nibh. Maecenas erat.</p>
+                <p>We’re very excited to welcome you for our wedding celebration! Please see the information below with all of the important details for the day of the event. If you have questions, please see our FAQs page. </p>
             </div>
             <div className="sectionBlock colorBackground" id="directions">
                 <div className="container ">
@@ -79,46 +79,38 @@ export default function Event(){
             <div className="sectionBlock container" id="schedule">
                 <h2>Day-of Schedule</h2>
                 <div className="schedule">
-                    <div className="row">
-                        <div className="time">
-                            3:30pm
-                        </div>
-                        <div className="activity">
-                            Guests Arrive
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="time">
-                            3:30pm
-                        </div>
-                        <div className="activity">
-                            Guests Arrive
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="time">
-                            3:30pm
-                        </div>
-                        <div className="activity">
-                            Guests Arrive
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="time">
-                            3:30pm
-                        </div>
-                        <div className="activity">
-                            Guests Arrive
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="time">
-                            3:30pm
-                        </div>
-                        <div className="activity">
-                            Guests Arrive
-                        </div>
-                    </div>
+                    <table cellPadding={5}>
+                        <tbody>
+                        <tr>
+                            <td className="time">4:30pm</td>
+                            <td className="activity">Guests Arrive</td>
+                        </tr>
+                        <tr>
+                            <td className="time">4:45pm</td>
+                            <td className="activity">Wedding Ceremony</td>
+                        </tr>
+                        <tr>
+                            <td className="time">5:15pm</td>
+                            <td className="activity">Photographs/Champagne in the park</td>
+                        </tr>
+                        <tr>
+                            <td className="time">6:00pm</td>
+                            <td className="activity">Reception Hall Opens/Cocktail Hour</td>
+                        </tr>
+                        <tr>
+                            <td className="time">7:00pm</td>
+                            <td className="activity">Dinner</td>
+                        </tr>
+                        <tr>
+                            <td className="time">8:00pm</td>
+                            <td className="activity">Dancing</td>
+                        </tr>
+                        <tr>
+                            <td className="time">12:30am</td>
+                            <td className="activity">Closing time</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>

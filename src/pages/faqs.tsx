@@ -16,12 +16,12 @@ export default function Faq(){
                 <div className="container" id="faqs">
                     <ul>
                         <li>
-                            <h4>Where is the cerimony located?</h4>
-                            <p>The cerimony will be held at the Leo Mol Sculpture Garden, near the Park Cafe. <strong>It will not be at the leaf or the pavillion.</strong></p>
+                            <h4>Where is the ceremony located?</h4>
+                            <p>The ceremony will be held at the Leo Mol Sculpture Garden, near the Park Cafe. <strong>It will not be at the leaf or the pavillion.</strong></p>
                         </li>
                         <li>
                             <h4>What time does the reception end?</h4>
-                            <p>The ceremony will be held from 5:00 pm to 5:30 pm. The reception will be held from 6:00 pm to 1:00 am. </p>
+                            <p>The ceremony will be held from 4:45 pm to 5:15 pm. The reception will be held from 6:00 pm to 12:30 am. </p>
                         </li>
                         <li>
                             <h4>Where should I park?</h4>
