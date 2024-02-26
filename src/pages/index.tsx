@@ -27,13 +27,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="ourStory sectionBlock">
-        <div className="container">
-          <h2>Our Story</h2>
-          <p>Pure Chaos</p>
-        </div>
-      </div>
-
     </>
   );
 }

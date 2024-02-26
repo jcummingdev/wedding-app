@@ -17,7 +17,7 @@ export default function About(){
 
                 <p><Img src="/xmas.jpg" width={400} height={266} style={{float: 'none', padding: '10px 10px 10px 0px'}} alt="Christmas 2011"/>It took two years before I finally had the nerve to say yes to him. At 15, I think we both knew that this was it but what kind of easy-peasy life would that be?</p>
 
-                <p>After 13 crazy but magical years and two cats whom we can&rsquo;t get enough of, Jason asked if he could take me to Paris which I immediately followed with &ldquo;Are you proposing?&rdquo; Of course, <Img src="/halloween.jpg" width={225} height={225} style={{float: 'right', padding: '10px 0px 10px 10px'}} alt="This is hilarious"/>he said no, but a day before we left I overheard him telling a mutual friend that he was in fact, proposing. (I was literally two feet away from both of them). Despite knowing, the proposal was absolutely breathtaking. I mean, sunrise in front of the Eiffel Tower, are you kidding?</p>
+                <p>After 13 crazy but magical years and two cats whom we can&rsquo;t get enough of, Jason asked if he could take me to Paris which I immediately followed with &ldquo;Are you proposing?&rdquo; Of course, he said no, but a day before we left I overheard him telling a mutual friend that he was in fact, proposing. <Img src="/halloween.jpg" width={225} height={225} style={{float: 'right', padding: '10px 0px 10px 10px'}} alt="This is hilarious"/>(I was literally two feet away from both of them). Despite knowing, the proposal was absolutely breathtaking. I mean, sunrise in front of the Eiffel Tower, are you kidding?</p>
 
                 <p>Jason and I grew up together. He was my best friend before he was anything else. I couldn&rsquo;t imagine a better happy ending. He is my light, my love &amp; everything in between. I cannot wait to say &lsquo;I do&rsquo;.</p>
 
@@ -33,8 +33,8 @@ export default function About(){
 
                 <p>2 years ago we flew to Paris, got engaged, and then packed our SUV and drove across the country to settle in B.C., just like we always planned. Every day I can&rsquo;t believe this is how my life actually turned out and I can&apos;t wait to enjoy every single day of the next 78 years together. </p>
 
-                <div className="photoContainer" style={{width: '100%', height: '600px', position: 'relative'}}>
-                    <Img src={'/1N7A7311.jpg'} fill={true} alt="Proposal" style={{objectFit: 'cover'}}/>
+                <div className="heroImage" style={{width: '100%', height: '600px', position: 'relative'}}>
+                    <Img src={'/1N7A7311.jpg'} fill={true} alt="Proposal" style={{objectFit: 'cover', objectPosition: 'bottom'}}/>
                 </div>
 
 
