@@ -167,7 +167,7 @@ export default function Rsvp(){
             setFormMessage(data.message);
         } catch (error) {
             console.error('Error:', error);
-            // Handle error as needed
+            setFormMessage('Your RSVP was not able to be saved. Please try again later')
         } finally {
             nProgress.done();
         }
