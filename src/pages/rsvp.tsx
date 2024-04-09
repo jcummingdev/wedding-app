@@ -198,7 +198,7 @@ export default function Rsvp(){
 
             <div className="container">
 
-            <h2>We're currently experiencing some technical difficulties. Please try again later</h2>
+                <h2>we are currently experiencing technical difficulties</h2>
 
             </div>
 

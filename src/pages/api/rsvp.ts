@@ -28,8 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return
     }
 
-    console.log(req.body.invite)
-
     try {
         await updateInvitation(req.body.invite, req.body.attending)
         res.status(200).send({message: 'You have been successfully confirmed!'})
@@ -56,16 +54,30 @@ export async function updateInvitation(inviteData:inviteInfo, attending:boolean)
         })),
     };
 
-    await prisma.invitations.update({
+    console.log(inviteData.id)
+
+    const updateInvite = await prisma.invitations.update({
         where: {
             id: inviteData.id,
-        },
+        }, 
         data: {
             fName: inviteData.fName,
             lName: inviteData.lName,
             email: inviteData.email,
             attending: attending,
-            guests: guestsUpdate,
-        },
-    });
+        }
+    })
+
+    // const updateInvite = await prisma.Invitations.update({
+    //     where: {
+    //         id: inviteData.id,
+    //     },
+    //     data: {
+    //         fName: inviteData.fName,
+    //         lName: inviteData.lName,
+    //         email: inviteData.email,
+    //         attending: attending,
+    //         // guests: guestsUpdate,
+    //     },
+    // });
 }

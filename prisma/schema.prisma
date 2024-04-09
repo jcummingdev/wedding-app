@@ -31,7 +31,7 @@ model Invitations {
   // INVITATION
   qrCode String ?
   pdfInvitation String ?
-  textCode String ? @unique
+  textCode String ? 
 
   //GUESTS
   guests Guests[]
