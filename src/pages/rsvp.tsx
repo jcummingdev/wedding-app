@@ -110,6 +110,8 @@ export default function Rsvp(){
     })
     const [formMessage, setFormMessage] = useState<string>('')
 
+    console.log(inviteInfo)
+
     function inputHanlder(e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement>) {
         // input handler
         const field = e.target.name

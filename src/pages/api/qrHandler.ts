@@ -41,7 +41,15 @@ export async function lookUpCode(code:string){
             receptionOnly: true,
             dietaryRestrictions: true,
 
-            guests: true
+            guests: {
+                select: {
+                    id: true,
+                    invitationId: true,
+                    fName: true,
+                    lName: true,
+                    dietaryRestrictions: true,
+                }
+            }
         }
     })
 

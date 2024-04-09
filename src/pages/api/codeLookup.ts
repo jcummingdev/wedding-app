@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export async function lookUpCode(code:string){
     const prisma = new PrismaClient
 
-    const invitationData = await prisma.invitations.findUnique({
+    const invitationData = await prisma.invitations.findMany({
         where: {
             textCode: code
         },

@@ -40,8 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export async function updateInvitation(inviteData:inviteInfo, attending:boolean){
     const prisma = new PrismaClient
 
-    console.log('function firing')
-
     const guestsUpdate: any = {
         updateMany: inviteData.guests?.map(guest => ({
             where: { id: guest.id },
@@ -54,30 +52,33 @@ export async function updateInvitation(inviteData:inviteInfo, attending:boolean)
         })),
     };
 
-    console.log(inviteData.id)
+    if (inviteData.guests?.length && inviteData.guests?.length > 0){
+        for (var guest of inviteData.guests) {
+            const updateGuest = await prisma.guests.update({
+                where: {
+                    id: guest.id,
+                },
+                data: {
+                    fName: guest.fName,
+                    lName: guest.lName,
+                    dietaryRestrictions: guest.dietaryRestrictions,
+                }
+            })
+        }        
+    }
+
 
     const updateInvite = await prisma.invitations.update({
         where: {
             id: inviteData.id,
-        }, 
+        },
         data: {
             fName: inviteData.fName,
             lName: inviteData.lName,
             email: inviteData.email,
             attending: attending,
-        }
-    })
-
-    // const updateInvite = await prisma.Invitations.update({
-    //     where: {
-    //         id: inviteData.id,
-    //     },
-    //     data: {
-    //         fName: inviteData.fName,
-    //         lName: inviteData.lName,
-    //         email: inviteData.email,
-    //         attending: attending,
-    //         // guests: guestsUpdate,
-    //     },
-    // });
+            dietaryRestrictions: inviteData.dietaryRestrictions,
+            // guests: inviteData.guests,
+        },
+    });
 }
