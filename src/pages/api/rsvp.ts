@@ -1,6 +1,5 @@
 import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from "next/types";
-import nProgress from 'nprogress';
 
 interface guestInfo {
     id: string
@@ -29,6 +28,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return
     }
 
+    console.log(req.body.invite)
+
     try {
         await updateInvitation(req.body.invite, req.body.attending)
         res.status(200).send({message: 'You have been successfully confirmed!'})
@@ -40,6 +41,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 export async function updateInvitation(inviteData:inviteInfo, attending:boolean){
     const prisma = new PrismaClient
+
+    console.log('function firing')
 
     const guestsUpdate: any = {
         updateMany: inviteData.guests?.map(guest => ({
@@ -53,7 +56,7 @@ export async function updateInvitation(inviteData:inviteInfo, attending:boolean)
         })),
     };
 
-    const updateInvite = await prisma.invitations.update({
+    await prisma.invitations.update({
         where: {
             id: inviteData.id,
         },

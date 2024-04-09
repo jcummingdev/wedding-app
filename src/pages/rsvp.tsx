@@ -198,50 +198,7 @@ export default function Rsvp(){
 
             <div className="container">
 
-                {validCode? 
-                    
-                    <div className="confirmForm">
-                        <h2>Hi {inviteInfo?.fName}, we can&apos;t wait to see you!</h2>
-
-                        <div className="primaryGuest">
-                            <label id="name">Please Confirm your details
-                                <div className="row">
-                                    <input type="text" name="fName" placeholder='First Name' defaultValue={inviteInfo.fName? inviteInfo.fName : ''} onChange={(e) => inputHanlder(e)}/>
-                                    <input type="text" name="lName" placeholder='Last Name' defaultValue={inviteInfo.lName? inviteInfo.lName : ''} onChange={(e) => inputHanlder(e)}/>
-                                </div>
-
-                            </label>
-                            <label id="email">Email Address: 
-                                <input type="text" name='email' placeholder="email" defaultValue={inviteInfo.email? inviteInfo.email : ''} onChange={(e) => inputHanlder(e)}/>
-                            </label>
-                            <label id="restrictions">Do you have any dietary restrictions?
-                                <textarea name="dietaryRestrictions" placeholder="Dietary Restrictions/Allergies" defaultValue={inviteInfo.dietaryRestrictions? inviteInfo.dietaryRestrictions : ''} onChange={(e) => inputHanlder(e)}/>
-                            </label>
-                        </div>
-
-                        <div className="guestsSection">
-                            {guests}
-                        </div>
-                        <div className="formAcceptance">
-                            <p>Please note, due to limited seating availability, only guests listed above will be accounted for at the event. Additionally, both the ceremony and reception will not be child-friendly. </p>
-                            <div className="formMessage">
-                                <p>{formMessage}</p>
-                            </div>
-                            <button onClick={() => submitHandler(true)}>
-                                Confirm attendance for me and my guests
-                            </button>
-                            <button onClick={() => submitHandler(false)}>
-                                I will not be in attendance
-                            </button>
-                        </div>
-
-                    </div> 
-                : 
-                    <InfoReq 
-                        codeHandler={setValidCode}
-                        invitationInfoHandler={setInviteInfo}
-                    />                
-                }
+            <h2>We're currently experiencing some technical difficulties. Please try again later</h2>
 
             </div>
 
