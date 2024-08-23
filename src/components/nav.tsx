@@ -22,7 +22,7 @@ export default function Nav() {
                         <li><Link href='/'>Home</Link></li>
                         <li><Link href='about'>About Us</Link></li>
                         <li><Link href='event'>Event Info</Link></li>
-                        <li><Link href='rsvp'>RSVP</Link></li>
+                        <li><Link href='directions'>Directions</Link></li>
                         <li><Link href='faqs'>FAQs</Link></li>
                     </ul>
                 </nav>

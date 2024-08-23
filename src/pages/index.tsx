@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Img from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">
+        <div><Link href="/directions" style={{width: '100%', textAlign: 'center', fontSize: '2.5rem', color: 'red'}}><h3 style={{color: 'red'}}>Click Here for Directions</h3></Link></div>
         <div className="heroImage" style={{position: 'relative', width: '100%'}}>
           <Img 
             src={'/1N7A7311.jpg'}

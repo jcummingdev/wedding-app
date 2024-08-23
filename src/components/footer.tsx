@@ -11,7 +11,7 @@ export default function Footer() {
                         <li><Link href='/about'>About Us</Link></li>
                         <li><Link href='/event'>Event Info</Link></li>
                         <li><Link href='/rsvp'>RSVP</Link></li>
-                        <li><Link href='/gifts'>Gifts</Link></li>
+                        <li><Link href='/directions'>Directions</Link></li>
                     </ul>
                 </nav>
             </div>
