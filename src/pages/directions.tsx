@@ -4,7 +4,7 @@ export default function DirectionsPage() {
         
             <div className="container" id="intro">
                 <h1>How to get to the ceremony</h1>
-                <p>We've received a number of questions relating to the location of the ceremony and how to navigate the gardents. Below, you'll find directions and video walkthroughs to help you get to the Leo Mol Sculpture Garden.</p>
+                <p>We&apos;ve received a number of questions relating to the location of the ceremony and how to navigate the gardents. Below, you&apos;ll find directions and video walkthroughs to help you get to the Leo Mol Sculpture Garden.</p>
             </div>
             <div className="sectionBlock colorBackground" id="directions">
                 <div className="container ">
